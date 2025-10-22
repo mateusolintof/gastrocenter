@@ -16,8 +16,8 @@ export default function OurSolutions() {
 
         <div className="grid md:grid-cols-2 grid-gap-lg">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
-            <div className="font-semibold text-brand flex items-center gap-2"><CalendarCheck2 className="h-5 w-5"/> SDR Qualificador + Agendamento</div>
-            <ul className="mt-3 space-y-1 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap"><CalendarCheck2 className="h-5 w-5"/> SDR Qualificador + Agendamento</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>• Atendimento 24/7 com resposta imediata</li>
               <li>• Qualificação automática (particular × convênio)</li>
               <li>• Validação de convênios e proposta de horários</li>
@@ -25,8 +25,8 @@ export default function OurSolutions() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
-            <div className="font-semibold text-brand flex items-center gap-2"><MessageSquare className="h-5 w-5"/> FAQ Inteligente</div>
-            <ul className="mt-3 space-y-1 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap"><MessageSquare className="h-5 w-5"/> FAQ Inteligente</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>• Procedimentos, exames, convênios e valores</li>
               <li>• Localização, horários e preparo</li>
               <li>• Convida a agendar ao final</li>
@@ -34,8 +34,8 @@ export default function OurSolutions() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
-            <div className="font-semibold text-brand flex items-center gap-2"><BellRing className="h-5 w-5"/> Anti No‑Show + Follow‑Up</div>
-            <ul className="mt-3 space-y-1 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap"><BellRing className="h-5 w-5"/> Anti No‑Show + Follow‑Up</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>• Lembretes D‑2, D‑1 e D‑2h + confirmação</li>
               <li>• Reagendamento automático e fila de espera</li>
               <li>• Follow‑up pós‑atendimento</li>
@@ -43,8 +43,8 @@ export default function OurSolutions() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
-            <div className="font-semibold text-brand flex items-center gap-2"><Stethoscope className="h-5 w-5"/> CRM + Agenda Unificada + Dashboard</div>
-            <ul className="mt-3 space-y-1 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap"><Stethoscope className="h-5 w-5"/> CRM + Agenda Unificada + Dashboard</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>• Unifica convênios + particular</li>
               <li>• Funis, tags e histórico completo</li>
               <li>• KPIs, funil e relatórios executivos</li>
@@ -54,16 +54,16 @@ export default function OurSolutions() {
 
         <div className="grid md:grid-cols-2 grid-gap-lg">
           <div className="card">
-            <div className="font-semibold text-brand">SOLUÇÕES INTELIGENTES</div>
-            <ul className="mt-3 space-y-2 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap">SOLUÇÕES INTELIGENTES</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>Dashboard em tempo real</li>
               <li>CRM com histórico completo</li>
               <li>Insights e relatórios acionáveis</li>
             </ul>
           </div>
           <div className="card">
-            <div className="font-semibold text-brand">CONFIABILIDADE E SEGURANÇA</div>
-            <ul className="mt-3 space-y-2 text-gray-700 text-sm">
+            <div className="font-semibold text-brand flex items-center gap-2 flex-wrap">CONFIABILIDADE E SEGURANÇA</div>
+            <ul className="mt-3 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               <li>• Fallback humano quando necessário</li>
               <li>• Monitoramento e reprocessamento</li>
               <li>• Privacidade, LGPD e segurança de dados</li>
