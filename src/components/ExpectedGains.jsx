@@ -17,23 +17,23 @@ export default function ExpectedGains() {
         <div className="grid md:grid-cols-2 grid-gap-xl">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card hover:shadow-md transition-shadow">
             <div className="text-xl font-bold text-brand mb-2 flex items-center gap-2"><Trophy className="h-5 w-5"/> O que você conquista</div>
-            <div className="text-gray-700 space-y-2 text-sm">
-              <div>Atendimento 24/7 no WhatsApp — sem perda de leads fora do horário</div>
-              <div>Qualificação e FAQ automatizados — equipe foca no que importa</div>
-              <div>Confirmações e reagendamentos automáticos — redução de faltas</div>
-              <div>Follow‑up pós‑atendimento — retornos/exames e continuidade</div>
-            </div>
+            <ul className="text-gray-700 space-y-2 text-sm leading-relaxed list-disc list-inside">
+              <li>Atendimento 24/7 no WhatsApp — sem perda de leads fora do horário</li>
+              <li>Qualificação e FAQ automatizados — equipe foca no que importa</li>
+              <li>Confirmações e reagendamentos automáticos — redução de faltas</li>
+              <li>Follow‑up pós-atendimento — retornos/exames e continuidade</li>
+            </ul>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card hover:shadow-md transition-shadow">
             <div className="text-xl font-bold text-brand mb-2 flex items-center gap-2"><Brain className="h-5 w-5"/> Inteligência em tempo real &amp; Relatórios</div>
-            <div className="text-gray-700 space-y-2 text-sm">
-              <div>Taxa de conversão por origem e etapa</div>
-              <div>Especialidades e exames mais procurados</div>
-              <div>Previsão de no-show, ocupação e capacidade</div>
-              <div>Funil completo por período com KPIs executivos</div>
-              <div>Baseado em dados — sem achismos</div>
-            </div>
+            <ul className="text-gray-700 space-y-2 text-sm leading-relaxed list-disc list-inside">
+              <li>Taxa de conversão por origem e etapa</li>
+              <li>Especialidades e exames mais procurados</li>
+              <li>Previsão de no-show, ocupação e capacidade</li>
+              <li>Funil completo por período com KPIs executivos</li>
+              <li>Baseado em dados — sem achismos</li>
+            </ul>
           </motion.div>
         </div>
 
