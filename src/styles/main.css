@@ -151,9 +151,9 @@ body {
   .modal-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* Scroll snap for slide-like feel */
-.snap-container { height: 100vh; overflow-y: auto; scroll-snap-type: y mandatory; }
-.snap-section { scroll-snap-align: start; }
+/* Scroll snap (desativado para rolagem fluida) */
+.snap-container { min-height: 100vh; overflow-y: visible; }
+.snap-section { scroll-snap-align: none; }
 
 /* Boxed container */
 .container { max-width: 64rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
