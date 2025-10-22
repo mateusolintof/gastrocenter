@@ -1,8 +1,8 @@
-# AGENTS.md — Guia Completo do Projeto Gastrocenter (Next.js)
+# AGENTS.md — Guia Completo do Projeto Gastrocentro (Next.js)
 
 Este arquivo orienta qualquer agente/humano a trabalhar neste repositório com segurança e consistência. Siga estas instruções sempre que criar, revisar ou executar o projeto.
 
-- Stack principal: Next.js 14 (App Router) + React 18
+- Stack principal: Next.js 15 (App Router) + React 18
 - Estilos: Tailwind CSS v4 (via `@theme` e `@tailwindcss/postcss`)
 - Animações: Framer Motion
 - Flowchart: React Flow
@@ -13,9 +13,10 @@ Este arquivo orienta qualquer agente/humano a trabalhar neste repositório com s
 - NPM >= 9
 
 ## Scripts NPM
-- `npm run dev` — Executa o servidor de desenvolvimento em `http://localhost:3000`
-- `npm run build` — Gera build de produção
-- `npm run start` — Inicia servidor de produção (após `build`)
+- `npm run dev` — Servidor local (`http://localhost:3000`, desativa Next DevTools)
+- `npm run build` — Build de produção
+- `npm run start` — Inicia a build em modo produção
+- `npm run clean:vite` — Remove resíduos do antigo bundler Vite (`node_modules/.vite`)
 
 ## Estrutura do Projeto
 ```
@@ -32,14 +33,15 @@ package.json        # Scripts e dependências
 ```
 
 ## Convenções Importantes
-- App Router (Next 14):
+- App Router (Next 15):
   - Componentes são Server Components por padrão. Use `"use client"` no topo apenas quando necessário (ex.: Framer Motion, React Flow, handlers de eventos globais do browser).
   - Páginas ficam em `app/`. Rotas adicionais = novas pastas com `page.jsx`.
   - Metadados globais (title/description) ficam em `app/layout.jsx` via `export const metadata`.
 - CSS/Tailwind:
-  - Tailwind v4 usa `@import "tailwindcss";` e `@theme` direto no CSS. Não há `tailwind.config.js` por padrão.
-  - O plugin é `@tailwindcss/postcss` (configurado em `postcss.config.js` como ESM: `export default { ... }`).
-  - CSS global deve ser importado em `app/layout.jsx` (não importe CSS global dentro de componentes).
+  - Tailwind v4 usa `@import "tailwindcss";` e `@theme` direto no CSS (sem `tailwind.config.js`).
+  - Processamento via `@tailwindcss/postcss` (ESM em `postcss.config.js`).
+  - Estilos globais importados apenas em `app/layout.jsx`.
+  - Utilitários customizados (`.stack-sm`, `.grid-gap-xl`, `.modal-card`, etc.) concentram os espaçamentos e devem ser reaproveitados antes de criar classes novas.
 - React Flow:
   - O CSS de React Flow (`reactflow/dist/style.css`) é importado uma única vez em `app/layout.jsx`.
 - Pastas/Arquivos obsoletos:
@@ -60,12 +62,16 @@ package.json        # Scripts e dependências
 Alterações visuais relevantes:
 - `src/styles/main.css`: tokens de marca, cores, espaçamentos, tipografia (via `@theme`).
 - `src/components/*`: seções da landing. Ajuste textos/dados aqui.
+- Layouts usam as utilities `stack-*` e `grid-gap-*` para garantir respiro consistente. Prefira reutilizá-las a criar margins manuais.
+- Modais reutilizam `.modal-card`, `.modal-title`, `.modal-body`. Ao criar um modal novo, mantenha esse padrão.
 
 ## Build e Deploy
 - Produção local:
   - `npm run build` e `npm run start`
 - Deploy recomendado: Vercel (Next.js nativo)
-  - Sem configurações especiais; o projeto já está pronto para App Router.
+  - Deploy automático ao conectar o repositório GitHub.
+  - Variáveis de ambiente (se necessárias) devem ser definidas no painel da Vercel.
+  - Utilize o build command padrão (`npm run build`) e output `.next` (default).
 
 ## Limpeza de Caches (quando necessário)
 - Next.js: `rm -rf .next`
@@ -111,4 +117,3 @@ Alterações visuais relevantes:
 - Objetivo: página de apresentação performática, estável e fácil de ajustar.
 
 — Fim do guia —
-
