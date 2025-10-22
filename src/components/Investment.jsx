@@ -16,11 +16,11 @@ export default function Investment() {
             <div className="mt-3 text-gray-800 space-y-2">
               <div>
                 <div className="text-gray-600 text-sm">Investimento Único (Setup + Dev)</div>
-                <div className="text-xl font-bold">R$ 10.000,00</div>
+                <div className="text-xl font-bold">R$ 12.000,00</div>
               </div>
               <div>
                 <div className="text-gray-600 text-sm">Mensalidade</div>
-                <div className="text-lg font-semibold">R$ 800,00/mês</div>
+                <div className="text-lg font-semibold">R$ 1.000,00/mês</div>
               </div>
               <ul className="mt-2 text-sm text-gray-700 space-y-1">
                 <li>• Agente FAQ especialista</li>
@@ -54,7 +54,7 @@ export default function Investment() {
             <div className="mt-3 text-gray-800 space-y-2">
               <div>
                 <div className="text-gray-600 text-sm">Investimento Único (Setup + Dev)</div>
-                <div className="text-xl font-bold">R$ 10.000,00</div>
+                <div className="text-xl font-bold">R$ 12.000,00</div>
               </div>
               <div>
                 <div className="text-gray-600 text-sm">Mensalidade</div>
@@ -74,9 +74,9 @@ export default function Investment() {
             <div className="text-brand font-bold">Solução Full — Pacote Completo</div>
             <div className="mt-3 text-gray-800 space-y-2">
               <div className="text-gray-600 text-sm">Investimento Único</div>
-              <div className="text-2xl font-extrabold">De R$ 40.000 → R$ 25.000</div>
+              <div className="text-2xl font-extrabold">De R$ 44.000 → R$ 30.000</div>
               <div className="text-gray-600 text-sm">Mensalidade</div>
-              <div className="text-lg font-semibold">De R$ 4.000/mês → R$ 2.500/mês</div>
+              <div className="text-lg font-semibold">R$ 2.500/mês</div>
               <div className="text-gray-700 text-sm mt-2">Inclui: SDR + FAQ + No‑Show + CRM + Agenda Unificada + Dashboard</div>
             </div>
           </div>
@@ -88,14 +88,13 @@ export default function Investment() {
                 <div className="font-semibold text-gray-800">Investimento Único</div>
                 <ul className="mt-1 space-y-1 text-gray-700">
                   <li>• À vista (5% de desconto)</li>
-                  <li>• 5 parcelas de R$ 5.000</li>
-                  <li>• 3x sem juros (cartão corporativo)</li>
+                  <li>• Entrada de R$ 10.000 + restante em 5x</li>
                 </ul>
               </div>
               <div>
                 <div className="font-semibold text-gray-800">Mensalidade</div>
                 <ul className="mt-1 space-y-1 text-gray-700">
-                  <li>• Inicia no mês seguinte ao go‑live</li>
+                  <li>• Inicia apenas 60 dias após o go‑live</li>
                   <li>• Faturamento via boleto ou PIX</li>
                 </ul>
               </div>
