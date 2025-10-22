@@ -93,7 +93,10 @@ export default function Problem() {
           transition={{ duration: 0.8 }}
           className="bg-red-50 border border-red-200 rounded-3xl p-10 stack-md"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Consequências do Atendimento Lento</h3>
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shadow-sm"><AlertTriangle className="w-5 h-5 text-brand" /></div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Consequências do Atendimento Lento</h3>
+          </div>
           <div className="grid grid-cols-3 grid-gap-xl">
             {impacts.map((impact, index) => {
               const Icon = impact.icon
@@ -104,13 +107,15 @@ export default function Problem() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="text-center"
+                  className="stack-sm"
                 >
-                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-sm">
-                    <Icon className="w-7 h-7 text-brand" />
+                  <div className="inline-flex items-center gap-2">
+                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                      <Icon className="w-5 h-5 text-brand" />
+                    </div>
+                    <h4 className="text-base font-semibold text-gray-900">{impact.title}</h4>
                   </div>
-                  <h4 className="text-base font-semibold mb-1 text-gray-900">{impact.title}</h4>
-                  <p className="text-sm text-gray-600">{impact.description}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{impact.description}</p>
                 </motion.div>
               )
             })}
