@@ -49,9 +49,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="mt-8"
+          className="mt-8 flex justify-center"
         >
-          <div className="inline-block card rounded-2xl px-6 py-3">
+          <div className="card rounded-2xl px-6 py-3 mx-auto">
             <p className="text-base md:text-lg text-gray-700">
               <span className="text-brand font-bold">Expertise em Marketing</span> + <span className="text-brand font-bold">Tecnologia de IA</span> = <span className="text-gray-900 font-bold">Resultados</span>
             </p>

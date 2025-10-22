@@ -55,12 +55,12 @@ export default function Problem() {
         >
           <span className="badge mb-4">O Problema Atual</span>
           <h2 className="section-title">O Gargalo que Está <span className="text-brand">Custando Caro</span></h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             A demora no atendimento está gerando frustração nos pacientes e impactando diretamente nos resultados da Gastrocenter
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-3 gap-8 mt-6 mb-12">
           {problems.map((problem, index) => {
             const Icon = problem.icon
             return (
@@ -91,7 +91,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-red-50 border border-red-200 rounded-3xl p-8"
+          className="bg-red-50 border border-red-200 rounded-3xl p-8 mt-8"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Consequências do Atendimento Lento</h3>
           <div className="grid grid-cols-3 gap-6">
@@ -122,7 +122,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-8 text-center"
+          className="mt-10 text-center"
         >
           <div className="inline-block card rounded-2xl px-6 py-3 border border-brand">
             <p className="text-base font-bold text-brand">
