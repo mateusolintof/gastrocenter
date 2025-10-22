@@ -5,11 +5,13 @@ import { CalendarCheck2, BellRing, MessageSquare, Stethoscope, KanbanSquare, Bar
 export default function OurSolutions() {
   return (
     <section className="section snap-section bg-white" id="solucoes">
-      <div className="container">
-        <h2 className="section-title">Nossas Soluções</h2>
-        <p className="subtitle mt-2">Fluxos inteligentes para WhatsApp, agenda unificada e gestão comercial</p>
+      <div className="container stack-lg">
+        <div className="stack-sm">
+          <h2 className="section-title">Nossas Soluções</h2>
+          <p className="subtitle">Fluxos inteligentes para WhatsApp, agenda unificada e gestão comercial</p>
+        </div>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-2 grid-gap-xl">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
             <div className="font-semibold text-brand flex items-center gap-2"><CalendarCheck2 className="h-5 w-5"/> SDR Qualificador + Agendamento</div>
             <ul className="mt-3 space-y-1 text-gray-700 text-sm">
@@ -47,7 +49,7 @@ export default function OurSolutions() {
           </motion.div>
         </div>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-2 grid-gap-xl">
           <div className="card">
             <div className="font-semibold text-brand">SOLUÇÕES INTELIGENTES</div>
             <ul className="mt-3 space-y-2 text-gray-700 text-sm">

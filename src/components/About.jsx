@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function About() {
   return (
     <section className="section snap-section bg-gray-50">
-      <div className="container">
+      <div className="container stack-lg">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export default function About() {
           <h2 className="section-title">Quem é a <span className="text-brand">Convert.AI</span>?</h2>
           <div className="w-24 h-1 bg-brand rounded-full"></div>
         </motion.div>
-        <div className="">
+        <div>
           {/* Nossa História - largura total (horizontal) */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -24,9 +24,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="card rounded-2xl p-8 md:p-10 w-full">
+            <div className="card rounded-2xl w-full stack-lg">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Nossa História</h3>
-              <div className="grid md:grid-cols-2 gap-8 text-gray-700">
+              <div className="grid md:grid-cols-2 grid-gap-lg text-gray-700">
                 <p className="text-base md:text-lg leading-relaxed">
                   Somos uma <span className="text-brand font-semibold">agência especializada em tráfego pago para clínicas médicas</span> há mais de 6 anos, com expertise comprovada em performance e crescimento no setor de saúde.
                 </p>
@@ -49,7 +49,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="mt-8 flex justify-center"
+          className="flex justify-center"
         >
           <div className="card rounded-2xl px-6 py-3 mx-auto">
             <p className="text-base md:text-lg text-gray-700">

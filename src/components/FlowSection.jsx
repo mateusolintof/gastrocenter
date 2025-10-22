@@ -13,9 +13,9 @@ export default function FlowSection() {
   return (
     <>
       <section className="section snap-section bg-gray-50">
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 mb-3">
+        <div className="container stack-lg">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="stack-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200">
               <Workflow className="w-5 h-5 text-brand" />
               <span className="text-sm font-medium text-gray-700">Fluxo Inteligente</span>
             </div>
@@ -23,15 +23,15 @@ export default function FlowSection() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="card rounded-3xl p-10">
-              <div className="grid grid-cols-4 gap-8 md:gap-10 mb-10">
+            <div className="card rounded-3xl stack-lg">
+              <div className="grid grid-cols-4 grid-gap-xl">
                 {[
                   { step: 1, title: 'Recepção', desc: 'Paciente envia mensagem', icon: UserCircle2 },
                   { step: 2, title: 'Agente SDR', desc: 'Identifica a necessidade', icon: Sparkles },
                   { step: 3, title: 'Triagem', desc: 'Encaminha para subfunil', icon: Workflow },
                   { step: 4, title: 'Atendimento', desc: 'Resolve ou agenda', icon: CheckCircle2 },
                 ].map((item, index) => (
-                  <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="text-center">
+                  <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="text-center stack-sm">
                     <div className="inline-flex items-center justify-center gap-2 mb-2">
                       <div className="w-10 h-10 bg-red-100 rounded-2xl flex items-center justify-center">
                         {(() => { const Icon = item.icon; return <Icon className="w-5 h-5 text-brand"/> })()}
@@ -63,16 +63,16 @@ export default function FlowSection() {
           </div>
 
           {/* Botão fora do card */}
-          <div className="text-center mt-6">
+          <div className="text-center stack-sm">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="btn-primary text-white px-8 py-4 text-lg"
+              className="btn-primary text-white px-8 py-4 text-lg mx-auto"
             >
               <Maximize2 className="w-6 h-6" />
               Explorar Fluxo Completo Interativo
               <Workflow className="w-6 h-6" />
             </button>
-            <p className="text-sm text-gray-500 mt-3">Clique para visualizar o fluxo detalhado e interativo</p>
+            <p className="text-sm text-gray-500">Clique para visualizar o fluxo detalhado e interativo</p>
           </div>
         </div>
       </section>
@@ -85,17 +85,15 @@ export default function FlowSection() {
         onClose={() => setStepModal(null)}
         title="Etapa 1 — Recepção"
       >
-        <div className="space-y-3">
-          <p>Primeiro contato do paciente. O agente responde imediatamente, com tom humano e acolhedor.</p>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Detecta se é primeira vez ou retorno</li>
-            <li>Identifica urgência na mensagem</li>
-            <li>Cria rapport com linguagem simples</li>
-          </ul>
-          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
-            <div className="font-semibold text-slate-800 mb-1">Canais omnichannel</div>
-            <div>Site, WhatsApp, Instagram, formulários e demais canais configurados convergem para uma fila única.</div>
-          </div>
+        <p>Primeiro contato do paciente. O agente responde imediatamente, com tom humano e acolhedor.</p>
+        <ul>
+          <li>Detecta se é primeira vez ou retorno</li>
+          <li>Identifica urgência na mensagem</li>
+          <li>Cria rapport com linguagem simples</li>
+        </ul>
+        <div className="modal-callout">
+          <strong>Canais omnichannel</strong>
+          <div>Site, WhatsApp, Instagram, formulários e demais canais configurados convergem para uma fila única.</div>
         </div>
       </StepDetailModal>
       <StepDetailModal
@@ -103,57 +101,51 @@ export default function FlowSection() {
         onClose={() => setStepModal(null)}
         title="Etapa 2 — Agente SDR"
       >
-        <div className="space-y-3">
-          <p>Qualificação inteligente com perguntas contextuais e sem menus engessados.</p>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Identifica a necessidade (consulta ou exame)</li>
-            <li>Coleta: convênio ou particular</li>
-            <li>Adapta perguntas conforme respostas</li>
-            <li>Evita perguntas desnecessárias</li>
-          </ul>
-        </div>
+        <p>Qualificação inteligente com perguntas contextuais e sem menus engessados.</p>
+        <ul>
+          <li>Identifica a necessidade (consulta ou exame)</li>
+          <li>Coleta: convênio ou particular</li>
+          <li>Adapta perguntas conforme respostas</li>
+          <li>Evita perguntas desnecessárias</li>
+        </ul>
       </StepDetailModal>
       <StepDetailModal
         open={stepModal === 3}
         onClose={() => setStepModal(null)}
         title="Etapa 3 — Triagem"
       >
-        <div className="space-y-3">
-          <p>Encaminhamento para o subfunil correto com coleta mínima de dados.</p>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-md border border-slate-200 p-3">
-              <div className="font-semibold text-slate-800 mb-1">Convênio</div>
-              <ul className="list-disc pl-5 text-sm space-y-1">
-                <li>Nome do convênio</li>
-                <li>Número da carteirinha e validade</li>
-                <li>Especialista desejado</li>
-              </ul>
-            </div>
-            <div className="rounded-md border border-slate-200 p-3">
-              <div className="font-semibold text-slate-800 mb-1">Particular</div>
-              <ul className="list-disc pl-5 text-sm space-y-1">
-                <li>Nome completo, CPF e telefone</li>
-                <li>Especialista desejado</li>
-              </ul>
-            </div>
+        <p>Encaminhamento para o subfunil correto com coleta mínima de dados.</p>
+        <div className="modal-columns">
+          <div className="modal-callout">
+            <strong>Convênio</strong>
+            <ul>
+              <li>Nome do convênio</li>
+              <li>Número da carteirinha e validade</li>
+              <li>Especialista desejado</li>
+            </ul>
           </div>
-          <p className="text-sm">Valida dados em tempo real e prepara o agendamento.</p>
+          <div className="modal-callout">
+            <strong>Particular</strong>
+            <ul>
+              <li>Nome completo, CPF e telefone</li>
+              <li>Especialista desejado</li>
+            </ul>
+          </div>
         </div>
+        <p>Valida dados em tempo real e prepara o agendamento.</p>
       </StepDetailModal>
       <StepDetailModal
         open={stepModal === 4}
         onClose={() => setStepModal(null)}
         title="Etapa 4 — Atendimento"
       >
-        <div className="space-y-3">
-          <p>Agendamento inteligente com consulta de agenda em tempo real.</p>
-          <ul className="list-disc pl-5 text-sm space-y-1">
-            <li>Apresenta opções formatadas (data/horário)</li>
-            <li>Confirma a escolha e registra no sistema</li>
-            <li>Dispara confirmação e orientações</li>
-            <li>Automatiza lembretes e follow‑up (reduz no‑show)</li>
-          </ul>
-        </div>
+        <p>Agendamento inteligente com consulta de agenda em tempo real.</p>
+        <ul>
+          <li>Apresenta opções formatadas (data/horário)</li>
+          <li>Confirma a escolha e registra no sistema</li>
+          <li>Dispara confirmação e orientações</li>
+          <li>Automatiza lembretes e follow‑up (reduz no-show)</li>
+        </ul>
       </StepDetailModal>
 
       {/* Modal: Solução de Contingência */}
@@ -193,12 +185,10 @@ function StepDetailModal({ open, onClose, title, children }) {
   if (!open) return null
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
-      <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl p-8" onClick={(e) => e.stopPropagation()}>
-        <div className="flex items-center justify-between mb-4">
-          <h4 className="text-2xl font-bold text-gray-900 text-center w-full">{title}</h4>
-          <button onClick={onClose} className="absolute right-6 top-6 text-gray-500 hover:text-gray-800">✕</button>
-        </div>
-        <div className="mx-auto max-w-prose text-gray-700 text-sm leading-relaxed text-left">
+      <div className="modal-card relative" onClick={(e) => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute right-6 top-6 text-gray-400 hover:text-gray-700 text-xl leading-none">✕</button>
+        <h4 className="modal-title">{title}</h4>
+        <div className="modal-body">
           {children}
         </div>
       </div>

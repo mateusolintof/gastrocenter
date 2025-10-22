@@ -45,22 +45,22 @@ export default function Problem() {
 
   return (
     <section className="section snap-section bg-white" id="desafio">
-      <div className="container">
+      <div className="container stack-lg">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-10"
+          className="stack-sm"
         >
-          <span className="badge mb-4">O Problema Atual</span>
+          <span className="badge">O Problema Atual</span>
           <h2 className="section-title">O Gargalo que Está <span className="text-brand">Custando Caro</span></h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-            A demora no atendimento está gerando frustração nos pacientes e impactando diretamente nos resultados da Gastrocenter
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            A demora no atendimento está gerando frustração nos pacientes e impactando diretamente nos resultados da Gastrocentro
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-8 md:gap-10 mt-8 mb-12">
+        <div className="grid grid-cols-3 grid-gap-xl">
           {problems.map((problem, index) => {
             const Icon = problem.icon
             return (
@@ -91,10 +91,10 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-red-50 border border-red-200 rounded-3xl p-8 mt-8"
+          className="bg-red-50 border border-red-200 rounded-3xl p-10 stack-md"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Consequências do Atendimento Lento</h3>
-          <div className="grid grid-cols-3 gap-8 md:gap-10">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Consequências do Atendimento Lento</h3>
+          <div className="grid grid-cols-3 grid-gap-xl">
             {impacts.map((impact, index) => {
               const Icon = impact.icon
               return (
@@ -121,10 +121,10 @@ export default function Problem() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-10 text-center"
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-center"
         >
-          <div className="inline-block card rounded-2xl px-6 py-3 border border-brand">
+          <div className="inline-block card rounded-2xl px-6 py-3 border border-brand mt-12">
             <p className="text-base font-bold text-brand">
               Cada minuto perdido é uma oportunidade que não volta
             </p>

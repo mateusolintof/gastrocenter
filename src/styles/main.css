@@ -71,19 +71,80 @@ body {
 /* Continuous page helpers (inspired by reference project) */
 .section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
 .section-title { font-size: 2.75rem; line-height: 1.15; font-weight: 800; color: var(--color-brand-dark); margin-bottom: 1.25rem; }
-.subtitle { font-size: 1.0625rem; color: var(--color-gray-600); margin-bottom: 1rem; }
+.subtitle { font-size: 1.0625rem; color: var(--color-gray-600); margin-bottom: 1.25rem; }
 .badge { display: inline-flex; align-items: center; border-radius: 9999px; border: 1px solid var(--color-gray-200); padding: 0.25rem 0.75rem; background: white; color: var(--color-gray-600); font-weight: 600; }
-.card { border-radius: 1rem; border: 1px solid var(--color-gray-200); background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); box-shadow: var(--shadow-sm); padding: 1.75rem; }
+.card { border-radius: 1rem; border: 1px solid var(--color-gray-200); background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); box-shadow: var(--shadow-sm); padding: 2rem; }
 .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 0.75rem; background: var(--color-brand-red); color: white; padding: 0.75rem 1.25rem; font-weight: 700; }
 .btn-outline-brand { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 0.75rem; border: 1.5px solid var(--color-brand-red); color: var(--color-brand-red); background: #fff; padding: 0.75rem 1.25rem; font-weight: 700; }
 .hero-kicker { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 900; color: var(--color-gray-900); }
+
+/* Layout helpers */
+.stack-sm > * + * { margin-top: 1.25rem; }
+.stack-md > * + * { margin-top: 1.75rem; }
+.stack-lg > * + * { margin-top: 2.5rem; }
+.grid-gap-lg { gap: 2rem; }
+.grid-gap-xl { gap: 2.5rem; }
+.row-gap-md { row-gap: 2rem; }
+.row-gap-lg { row-gap: 2.5rem; }
+
+@media (min-width: 1024px) {
+  .grid-gap-lg { gap: 2.75rem; }
+  .grid-gap-xl { gap: 3.25rem; }
+  .row-gap-md { row-gap: 2.5rem; }
+  .row-gap-lg { row-gap: 3rem; }
+}
+
+/* Modal helpers */
+.modal-card {
+  width: min(90vw, 48rem);
+  border-radius: 1.5rem;
+  background: white;
+  padding: 2.5rem;
+  box-shadow: 0 32px 64px -32px rgba(15, 23, 42, 0.35);
+}
+.modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+.modal-body {
+  max-width: 40rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.modal-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.modal-callout {
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+}
+.modal-columns {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .modal-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 /* Scroll snap for slide-like feel */
 .snap-container { height: 100vh; overflow-y: auto; scroll-snap-type: y mandatory; }
 .snap-section { scroll-snap-align: start; }
 
 /* Boxed container */
-.container { max-width: 68rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+.container { max-width: 64rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
 
 /* Consistent card spacing */
 .card h3 { margin-bottom: 0.5rem; }

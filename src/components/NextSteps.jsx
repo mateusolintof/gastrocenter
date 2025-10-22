@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 export default function NextSteps() {
   return (
     <section className="section snap-section bg-gray-50" id="proximos-passos">
-      <div className="container">
+      <div className="container stack-lg">
         <h2 className="section-title">Próximos Passos</h2>
-        <div className="mt-8 grid md:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-3 grid-gap-xl">
           {[
             { title: 'Alinhamento Final', desc: 'Refinamento dos requisitos e expectativas' },
             { title: 'Aprovação da Proposta', desc: 'Formalização do acordo e início do projeto' },
