@@ -8,6 +8,7 @@ import FlowchartModal from './FlowchartModal'
 export default function FlowSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [stepModal, setStepModal] = useState(null)
+  const [contingencyOpen, setContingencyOpen] = useState(false)
 
   return (
     <>
@@ -51,6 +52,16 @@ export default function FlowSection() {
             </div>
           </motion.div>
 
+          {/* Botão/Modal de Contingência (abaixo do card) */}
+          <div className="text-center mt-4 mb-3">
+            <button
+              onClick={() => setContingencyOpen(true)}
+              className="inline-flex items-center justify-center rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-brand hover:bg-red-100"
+            >
+              Solução de Contingência
+            </button>
+          </div>
+
           {/* Botão fora do card */}
           <div className="text-center mt-6">
             <button
@@ -74,28 +85,105 @@ export default function FlowSection() {
         onClose={() => setStepModal(null)}
         title="Etapa 1 — Recepção"
       >
-        Leads chegam por múltiplos canais (omnichannel): site, WhatsApp, Instagram, formulários e outros pontos de entrada definidos pela clínica. Todos os canais convergem para uma fila única.
+        <div className="space-y-3">
+          <p>Primeiro contato do paciente. O agente responde imediatamente, com tom humano e acolhedor.</p>
+          <ul className="list-disc pl-5 space-y-1 text-gray-700">
+            <li>Detecta se é primeira vez ou retorno</li>
+            <li>Identifica urgência na mensagem</li>
+            <li>Cria rapport com linguagem simples</li>
+          </ul>
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
+            <div className="font-semibold text-slate-800 mb-1">Canais omnichannel</div>
+            <div>Site, WhatsApp, Instagram, formulários e demais canais configurados convergem para uma fila única.</div>
+          </div>
+        </div>
       </StepDetailModal>
       <StepDetailModal
         open={stepModal === 2}
         onClose={() => setStepModal(null)}
         title="Etapa 2 — Agente SDR"
       >
-        O Agente SDR identifica a necessidade do paciente, qualifica (particular × convênio), coleta dados essenciais, valida convênios e direciona o atendimento corretamente.
+        <div className="space-y-3">
+          <p>Qualificação inteligente com perguntas contextuais e sem menus engessados.</p>
+          <ul className="list-disc pl-5 space-y-1 text-gray-700">
+            <li>Identifica a necessidade (consulta ou exame)</li>
+            <li>Coleta: convênio ou particular</li>
+            <li>Adapta perguntas conforme respostas</li>
+            <li>Evita perguntas desnecessárias</li>
+          </ul>
+        </div>
       </StepDetailModal>
       <StepDetailModal
         open={stepModal === 3}
         onClose={() => setStepModal(null)}
         title="Etapa 3 — Triagem"
       >
-        Encaminha automaticamente para o subfunil adequado (Resultados, Procedimentos, Exames ou Dúvidas), aplicando regras específicas e priorização quando necessário.
+        <div className="space-y-3">
+          <p>Encaminhamento para o subfunil correto com coleta mínima de dados.</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-md border border-slate-200 p-3">
+              <div className="font-semibold text-slate-800 mb-1">Convênio</div>
+              <ul className="list-disc pl-5 text-sm space-y-1">
+                <li>Nome do convênio</li>
+                <li>Número da carteirinha e validade</li>
+                <li>Especialista desejado</li>
+              </ul>
+            </div>
+            <div className="rounded-md border border-slate-200 p-3">
+              <div className="font-semibold text-slate-800 mb-1">Particular</div>
+              <ul className="list-disc pl-5 text-sm space-y-1">
+                <li>Nome completo, CPF e telefone</li>
+                <li>Especialista desejado</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-sm">Valida dados em tempo real e prepara o agendamento.</p>
+        </div>
       </StepDetailModal>
       <StepDetailModal
         open={stepModal === 4}
         onClose={() => setStepModal(null)}
         title="Etapa 4 — Atendimento"
       >
-        Resolve a demanda ou agenda com especialista, integra com a agenda e dispara confirmações e lembretes para reduzir no‑show.
+        <div className="space-y-3">
+          <p>Agendamento inteligente com consulta de agenda em tempo real.</p>
+          <ul className="list-disc pl-5 text-sm space-y-1">
+            <li>Apresenta opções formatadas (data/horário)</li>
+            <li>Confirma a escolha e registra no sistema</li>
+            <li>Dispara confirmação e orientações</li>
+            <li>Automatiza lembretes e follow‑up (reduz no‑show)</li>
+          </ul>
+        </div>
+      </StepDetailModal>
+
+      {/* Modal: Solução de Contingência */}
+      <StepDetailModal
+        open={contingencyOpen}
+        onClose={() => setContingencyOpen(false)}
+        title="Solução de Contingência — Quando o agente transfere para humano?"
+      >
+        <div className="space-y-3">
+          <div className="text-slate-800 font-semibold">O Agente é inteligente e sabe quando precisa de ajuda humana.</div>
+          <div>
+            <div className="font-semibold text-rose-600 mb-1">Transfere quando:</div>
+            <ul className="list-disc pl-5 text-sm space-y-1">
+              <li>Situação de emergência médica</li>
+              <li>Dúvidas sobre procedimentos muito específicos</li>
+              <li>Reclamações ou problemas complexos</li>
+              <li>Negociação de valores</li>
+              <li>Casos que fogem do padrão</li>
+            </ul>
+          </div>
+          <div>
+            <div className="font-semibold text-emerald-700 mb-1">Resolve sozinho:</div>
+            <ul className="list-disc pl-5 text-sm space-y-1">
+              <li>80% dos agendamentos de rotina</li>
+              <li>Dúvidas sobre localização, horários e convênios</li>
+              <li>Reagendamentos simples e confirmações</li>
+              <li>Informações sobre preparo de exames</li>
+            </ul>
+          </div>
+        </div>
       </StepDetailModal>
     </>
   )
