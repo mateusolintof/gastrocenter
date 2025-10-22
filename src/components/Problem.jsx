@@ -91,7 +91,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-red-50 border border-red-200 rounded-3xl p-10 stack-md"
+          className="bg-red-50 border border-red-200 rounded-3xl p-12 stack-md"
         >
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shadow-sm"><AlertTriangle className="w-5 h-5 text-brand" /></div>
