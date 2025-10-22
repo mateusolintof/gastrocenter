@@ -1,0 +1,28 @@
+{
+  "name": "gastrocenter-ai-presentation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NEXT_DISABLE_DEVTOOLS=1 next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean:vite": "node -e \"try{require('fs').rmSync('node_modules/.vite',{recursive:true,force:true});console.log('Removed node_modules/.vite')}catch(e){console.log('No .vite cache found')}\"",
+    "clean:next": "node -e \"try{require('fs').rmSync('.next',{recursive:true,force:true});console.log('Removed .next')}catch(e){console.log('No .next dir')}\""
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.462.0",
+    "@headlessui/react": "^2.2.0",
+    "reactflow": "^11.11.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0"
+  }
+}
