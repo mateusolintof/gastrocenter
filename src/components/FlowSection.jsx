@@ -53,10 +53,10 @@ export default function FlowSection() {
           </motion.div>
 
           {/* Botão/Modal de Contingência (abaixo do card) */}
-          <div className="text-center mt-4 mb-3">
+          <div className="text-center mt-8 mb-4">
             <button
               onClick={() => setContingencyOpen(true)}
-              className="inline-flex items-center justify-center rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-brand hover:bg-red-100"
+              className="btn-outline-brand px-8 py-4 text-lg"
             >
               Solução de Contingência
             </button>
