@@ -6,7 +6,7 @@ export default function NextSteps() {
     <section className="section snap-section bg-gray-50" id="proximos-passos">
       <div className="container">
         <h2 className="section-title">Próximos Passos</h2>
-        <div className="mt-8 grid md:grid-cols-3 gap-6">
+        <div className="mt-8 grid md:grid-cols-3 gap-8 md:gap-10">
           {[
             { title: 'Alinhamento Final', desc: 'Refinamento dos requisitos e expectativas' },
             { title: 'Aprovação da Proposta', desc: 'Formalização do acordo e início do projeto' },

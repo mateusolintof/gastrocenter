@@ -70,10 +70,10 @@ body {
 
 /* Continuous page helpers (inspired by reference project) */
 .section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
-.section-title { font-size: 3rem; line-height: 1.1; font-weight: 800; color: var(--color-brand-dark); margin-bottom: 1.25rem; }
-.subtitle { font-size: 1.0625rem; color: var(--color-gray-600); }
+.section-title { font-size: 2.75rem; line-height: 1.15; font-weight: 800; color: var(--color-brand-dark); margin-bottom: 1.25rem; }
+.subtitle { font-size: 1.0625rem; color: var(--color-gray-600); margin-bottom: 1rem; }
 .badge { display: inline-flex; align-items: center; border-radius: 9999px; border: 1px solid var(--color-gray-200); padding: 0.25rem 0.75rem; background: white; color: var(--color-gray-600); font-weight: 600; }
-.card { border-radius: 1rem; border: 1px solid var(--color-gray-200); background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); box-shadow: var(--shadow-sm); padding: 1.5rem; }
+.card { border-radius: 1rem; border: 1px solid var(--color-gray-200); background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); box-shadow: var(--shadow-sm); padding: 1.75rem; }
 .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 0.75rem; background: var(--color-brand-red); color: white; padding: 0.75rem 1.25rem; font-weight: 700; }
 .hero-kicker { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 900; color: var(--color-gray-900); }
 
@@ -82,7 +82,7 @@ body {
 .snap-section { scroll-snap-align: start; }
 
 /* Boxed container */
-.container { max-width: 72rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+.container { max-width: 68rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
 
 /* Consistent card spacing */
 .card h3 { margin-bottom: 0.5rem; }

@@ -8,7 +8,7 @@ export default function Investment() {
         <h2 className="section-title">Investimento</h2>
         <p className="subtitle mt-2">Soluções Modulares ou Pacote Completo</p>
 
-        <div className="mt-8 grid md:grid-cols-3 gap-6 items-stretch">
+        <div className="mt-8 grid md:grid-cols-3 gap-8 md:gap-10 items-stretch">
           <div className="card flex flex-col">
             <div className="text-brand font-bold">FAQ Inteligente</div>
             <div className="mt-3 text-gray-800 space-y-2">
@@ -67,7 +67,7 @@ export default function Investment() {
           </div>
         </div>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-6 items-stretch">
+        <div className="mt-8 grid md:grid-cols-2 gap-8 md:gap-10 items-stretch">
           <div className="card flex flex-col">
             <div className="text-brand font-bold">Solução Full — Pacote Completo</div>
             <div className="mt-3 text-gray-800 space-y-2">

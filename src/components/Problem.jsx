@@ -60,7 +60,7 @@ export default function Problem() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-8 mt-6 mb-12">
+        <div className="grid grid-cols-3 gap-8 md:gap-10 mt-8 mb-12">
           {problems.map((problem, index) => {
             const Icon = problem.icon
             return (
@@ -94,7 +94,7 @@ export default function Problem() {
           className="bg-red-50 border border-red-200 rounded-3xl p-8 mt-8"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Consequências do Atendimento Lento</h3>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-8 md:gap-10">
             {impacts.map((impact, index) => {
               const Icon = impact.icon
               return (

@@ -24,7 +24,7 @@ export default function FlowSection() {
 
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="card rounded-3xl p-10">
-              <div className="grid grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-4 gap-8 md:gap-10 mb-10">
                 {[
                   { step: 1, title: 'Recepção', desc: 'Paciente envia mensagem', icon: UserCircle2 },
                   { step: 2, title: 'Agente SDR', desc: 'Identifica a necessidade', icon: Sparkles },
@@ -192,13 +192,13 @@ export default function FlowSection() {
 function StepDetailModal({ open, onClose, title, children }) {
   if (!open) return null
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={onClose}>
-      <div className="bg-white w-full max-w-xl mx-4 rounded-2xl shadow-2xl p-6" onClick={(e) => e.stopPropagation()}>
-        <div className="flex items-center justify-between mb-3">
-          <h4 className="text-xl font-bold text-gray-900">{title}</h4>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-800">✕</button>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
+      <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl p-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-4">
+          <h4 className="text-2xl font-bold text-gray-900 text-center w-full">{title}</h4>
+          <button onClick={onClose} className="absolute right-6 top-6 text-gray-500 hover:text-gray-800">✕</button>
         </div>
-        <div className="text-gray-700 text-sm leading-relaxed">
+        <div className="mx-auto max-w-prose text-gray-700 text-sm leading-relaxed text-left">
           {children}
         </div>
       </div>

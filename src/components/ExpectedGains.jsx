@@ -9,7 +9,7 @@ export default function ExpectedGains() {
         <h2 className="section-title">Ganhos Esperados</h2>
         <p className="subtitle mt-2">Resultados concretos e mensuráveis para a Gastrocentro</p>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
+        <div className="mt-8 grid md:grid-cols-2 gap-8 md:gap-10">
           <div className="card hover:shadow-md transition-shadow">
             <div className="text-xl font-bold text-brand mb-2 flex items-center gap-2"><Trophy className="h-5 w-5"/> O que você conquista</div>
             <div className="text-gray-700 space-y-2 text-sm">
