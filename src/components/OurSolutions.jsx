@@ -14,7 +14,7 @@ export default function OurSolutions() {
           <p className="subtitle">Fluxos inteligentes para WhatsApp, agenda unificada e gestão comercial</p>
         </div>
 
-        <div className="grid md:grid-cols-2 grid-gap-xl">
+        <div className="grid md:grid-cols-2 grid-gap-lg">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
             <div className="font-semibold text-brand flex items-center gap-2"><CalendarCheck2 className="h-5 w-5"/> SDR Qualificador + Agendamento</div>
             <ul className="mt-3 space-y-1 text-gray-700 text-sm">
@@ -52,7 +52,7 @@ export default function OurSolutions() {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 grid-gap-xl">
+        <div className="grid md:grid-cols-2 grid-gap-lg">
           <div className="card">
             <div className="font-semibold text-brand">SOLUÇÕES INTELIGENTES</div>
             <ul className="mt-3 space-y-2 text-gray-700 text-sm">
@@ -86,67 +86,77 @@ export default function OurSolutions() {
 function DifferentialsModal({ open, onClose }) {
   if (!open) return null
 
+  const differentials = [
+    {
+      title: '1. Atendimento 24/7',
+      bullets: [
+        'Paciente agenda às 22h, domingo ou feriado',
+        'Não perde leads por estar fora do horário',
+        'Reduz ansiedade do paciente',
+      ],
+    },
+    {
+      title: '2. Resposta Instantânea',
+      bullets: [
+        'Tempo de resposta: menos de 3 segundos',
+        'Paciente não espera na fila',
+        'Taxa de conversão aumenta drasticamente',
+      ],
+    },
+    {
+      title: '3. Humanização Real',
+      bullets: [
+        'Conversa natural, não robótica',
+        'Usa o nome do paciente',
+        'Tom empático e acolhedor',
+        'Se adapta ao estilo de comunicação',
+      ],
+    },
+    {
+      title: '4. Inteligência Contextual',
+      bullets: [
+        'Entende erros de digitação',
+        'Compreende gírias e regionalismos',
+        'Lembra conversas anteriores',
+        'Ajusta respostas conforme perfil',
+      ],
+    },
+    {
+      title: '5. Escalabilidade',
+      bullets: [
+        'Atende diversos pacientes simultaneamente',
+        'Sem custo adicional por volume',
+        'Equipe humana focada em casos complexos',
+      ],
+    },
+    {
+      title: '6. Integração Total',
+      bullets: [
+        'Conecta com sistema de agendamento existente',
+        'Atualiza CRM de atendimento',
+        'Gera relatórios de desempenho e análises personalizadas',
+      ],
+    },
+  ]
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
       <div className="modal-card" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute right-6 top-6 text-gray-400 hover:text-gray-700 text-xl leading-none">✕</button>
         <h4 className="modal-title">🎯 Diferenciais da Solução</h4>
         <div className="modal-body">
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">1. Atendimento 24/7</h5>
-            <ul>
-              <li>Paciente agenda às 22h, domingo ou feriado</li>
-              <li>Não perde leads por estar fora do horário</li>
-              <li>Reduz ansiedade do paciente</li>
-            </ul>
-          </section>
-
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">2. Resposta Instantânea</h5>
-            <ul>
-              <li>Tempo de resposta: <strong>menos de 3 segundos</strong></li>
-              <li>Paciente não espera na fila</li>
-              <li>Taxa de conversão aumenta drasticamente</li>
-            </ul>
-          </section>
-
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">3. Humanização Real</h5>
-            <ul>
-              <li>Conversa natural, não robótica</li>
-              <li>Usa o nome do paciente</li>
-              <li>Tom empático e acolhedor</li>
-              <li>Se adapta ao estilo de comunicação</li>
-            </ul>
-          </section>
-
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">4. Inteligência Contextual</h5>
-            <ul>
-              <li>Entende erros de digitação</li>
-              <li>Compreende gírias e regionalismos</li>
-              <li>Lembra conversas anteriores</li>
-              <li>Ajusta respostas conforme perfil</li>
-            </ul>
-          </section>
-
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">5. Escalabilidade</h5>
-            <ul>
-              <li>Atende diversos pacientes simultaneamente</li>
-              <li>Sem custo adicional por volume</li>
-              <li>Equipe humana focada em casos complexos</li>
-            </ul>
-          </section>
-
-          <section className="stack-sm">
-            <h5 className="text-lg font-semibold text-gray-900">6. Integração Total</h5>
-            <ul>
-              <li>Conecta com sistema de agendamento existente</li>
-              <li>Atualiza CRM de atendimento</li>
-              <li>Gera relatórios de desempenho e análises personalizadas</li>
-            </ul>
-          </section>
+          <div className="modal-grid">
+            {differentials.map((item) => (
+              <div key={item.title} className="card stack-sm">
+                <h5 className="text-lg font-semibold text-gray-900">{item.title}</h5>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  {item.bullets.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
