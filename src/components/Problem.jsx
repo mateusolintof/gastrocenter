@@ -60,7 +60,7 @@ export default function Problem() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 grid-gap-xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 grid-gap-xl">
           {problems.map((problem, index) => {
             const Icon = problem.icon
             return (
@@ -71,15 +71,15 @@ export default function Problem() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
               >
-                <div className="card rounded-2xl p-6 h-full">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                <div className="card rounded-2xl p-6 h-full text-left md:text-left">
+                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 mx-auto md:mx-0">
                     <Icon className="w-6 h-6 text-brand" />
                   </div>
                   {problem.stat ? (
-                    <div className="text-3xl font-bold text-brand mb-1">{problem.stat}</div>
+                    <div className="text-3xl font-bold text-brand mb-1 text-center md:text-left">{problem.stat}</div>
                   ) : null}
-                  <h3 className="text-lg font-bold mb-1 text-gray-900">{problem.label}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{problem.description}</p>
+                  <h3 className="text-lg font-bold mb-1 text-gray-900 text-center md:text-left">{problem.label}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed text-center md:text-left">{problem.description}</p>
                 </div>
               </motion.div>
             )
@@ -97,7 +97,7 @@ export default function Problem() {
             <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center shadow-sm"><AlertTriangle className="w-5 h-5 text-brand" /></div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Consequências do Atendimento Lento</h3>
           </div>
-          <div className="grid grid-cols-3 grid-gap-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 grid-gap-xl">
             {impacts.map((impact, index) => {
               const Icon = impact.icon
               return (
@@ -107,7 +107,7 @@ export default function Problem() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="stack-sm"
+                  className="stack-sm text-left md:text-left"
                 >
                   <div className="inline-flex items-center gap-2">
                     <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
@@ -115,7 +115,7 @@ export default function Problem() {
                     </div>
                     <h4 className="text-base font-semibold text-gray-900">{impact.title}</h4>
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed">{impact.description}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed text-left">{impact.description}</p>
                 </motion.div>
               )
             })}

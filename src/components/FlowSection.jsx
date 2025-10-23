@@ -24,15 +24,15 @@ export default function FlowSection() {
 
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="card rounded-3xl stack-lg">
-              <div className="grid grid-cols-4 grid-gap-xl">
+              <div className="grid grid-cols-1 md:grid-cols-4 grid-gap-xl">
                 {[
                   { step: 1, title: 'Recepção', desc: 'Paciente envia mensagem', icon: UserCircle2 },
                   { step: 2, title: 'Agente SDR', desc: 'Identifica a necessidade', icon: Sparkles },
                   { step: 3, title: 'Triagem', desc: 'Encaminha para subfunil', icon: Workflow },
                   { step: 4, title: 'Atendimento', desc: 'Resolve ou agenda', icon: CheckCircle2 },
                 ].map((item, index) => (
-                  <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="text-center stack-sm">
-                    <div className="inline-flex items-center justify-center gap-2 mb-2">
+                  <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="stack-sm text-left md:text-center">
+                    <div className="inline-flex items-center justify-start md:justify-center gap-2 mb-2">
                       <div className="w-10 h-10 bg-red-100 rounded-2xl flex items-center justify-center">
                         {(() => { const Icon = item.icon; return <Icon className="w-5 h-5 text-brand"/> })()}
                       </div>
